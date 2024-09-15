@@ -15,8 +15,9 @@ function App() {
     {id: 9, name: "corn", calories: 140},
     {id: 10, name: "broccoli", calories: 120},];
 
-  return(<><List items={fruits} category="Fruits"/>
-  <List items={vegetables} category="Vegetables"/></>);
+  return(<>
+  {fruits.length > 0 ? <List items={fruits} category="Fruits"/> : null}
+  {vegetables.length > 0 ? <List items={vegetables} category="Vegetables"/>: null}
+</>);
 }
-
-export default App;
+export default App
