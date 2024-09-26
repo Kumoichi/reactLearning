@@ -1,35 +1,34 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 function MyComponent() {
-    const [count, setCount] = useState(0);
-    const [color, setColor] = useState("green");
+    const [width, setWidth] = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
 
-    //by adding count at the end of this, it counts up only when something is updated.
     useEffect(() => {
-        document.title = `Count: ${count} ${color}`;
-    },[count, color]);
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+            setHeight(window.innerHeight); // 修正: innerHeightの"i"を小文字に
+        };
 
-    function addCount(){
-        setCount(c => c + 1);
-    }
+        window.addEventListener("resize", handleResize);
+        console.log("event listener added");
 
-    function subtractCount() {
-        setCount(c => c -1);
-    }
+        return () => {
+            window.removeEventListener("resize", handleResize);
+            console.log("EVENT LISTENER REMOVED");
+        };
+    }, []);
 
-    function changeColor(){
-        setColor(c => c === "green" ? "red" : "green");
-    }
+    useEffect(() => {
+        document.title = `Size: ${width} x ${height}`;
+    },[width, height])
 
-    return(<>
-    <p style={{color: color}}>Count: {count}</p>
-    <button onClick={addCount}>Add</button>
-    <button onClick={subtractCount}>Subtract</button><br/>
-    <button onClick={changeColor}>Change Color</button>
-    </>);
+    return (
+        <>
+            <p>Window Width: {width}</p>
+            <p>Window Height: {height}</p>
+        </>
+    );
 }
 
-export default MyComponent
-
-//じゃあこれいったん書いてみるか
-
+export default MyComponent;
