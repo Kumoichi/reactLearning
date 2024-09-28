@@ -1,7 +1,7 @@
-import ColoPicker from "./ColoPicker";
+import MyComponent from "./MyComponent";
 
 function App() {
-  return(<><ColoPicker></ColoPicker></>);
+  return(<><MyComponent></MyComponent></>);
 }
 
 export default App;
