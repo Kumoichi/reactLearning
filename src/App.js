@@ -1,7 +1,7 @@
 import ColoPicker from "./ColoPicker";
 
 function App() {
-  return(<><ColoPicker></ColoPicker></>);
+  return(<></>);
 }
 
 export default App;
