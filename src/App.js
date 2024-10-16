@@ -1,6 +1,7 @@
+import DigitalClock from "./DigitalClock";
 
 function App() {
-  return(<></>);
+  return(<><DigitalClock></DigitalClock></>);
 }
 // comment addition
 

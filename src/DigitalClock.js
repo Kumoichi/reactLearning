@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const DigitalClock = () => {
   return (
-    <div>DigitalClock</div>
+    <div className='clock-container'>
+        <div className='clock'>
+            <span>00:00:00</span>
+        </div>
+    </div>
   )
 }
 
