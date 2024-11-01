@@ -1,5 +1,3 @@
-import ColoPicker from "./ColoPicker";
-
 function App() {
   return(<></>);
 }
