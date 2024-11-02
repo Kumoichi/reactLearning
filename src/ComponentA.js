@@ -1,5 +1,5 @@
 // userContext() = React Hook that allows you to share values between
-// multiple levels of components without passing props through each level
+// multiple levels of components without passing props through each level.
 import React, {useState, createContext} from 'react'
 import ComponentB from './ComponentB'
 
