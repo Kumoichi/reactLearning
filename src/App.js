@@ -1,6 +1,11 @@
-function App() {
-  return(<></>);
-}
-// comment addition
+import ComponentA from "./ComponentA";
 
-export default App;
+import React from 'react'
+
+export const App = () => {
+  return (
+   <ComponentA/>
+  )
+}
+
+export default App
