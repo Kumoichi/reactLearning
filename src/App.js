@@ -1,11 +1,8 @@
-import ComponentA from "./ComponentA";
+import MyComponent from "./MyComponent";
 
-import React from 'react'
-
-export const App = () => {
-  return (
-   <ComponentA/>
-  )
+function App() {
+  return(<><MyComponent /></>);
 }
+// comment addition
 
-export default App
+export default App;
